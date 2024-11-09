@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo preciosa</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <h2>Iniciar Sesión</h2>
+            <div class="input-field">
+                <input type="text" id="username" required>
+                <label>Escribe "Amor"</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" required>
+                <label>Escribe "Amor"</label>
+            </div>
+            <div class="forget">
+                <label class="forget-label">
+                    <input type="checkbox" id="remember">
+                    <p>Te amo</p>
+                </label>
+                <a href="#">Te amo mucho</a>
+            </div>              
+            <button type="submit">Haz click aqui si me amas</button>
+            <div class="register">
+                <p>¿sabias que te amo mucho? <a href="#"></a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value.toLowerCase(); // Convertir a minúsculas
+            const password = document.getElementById('password').value.toLowerCase(); // Convertir a minúsculas
+    
+            // Verificar las credenciales
+            if (username === 'amor' && password === 'amor') {
+                window.location.href = 'detalle.html'; // Redirigir a detalle.html
+                return false; // Prevenir el envío del formulario
+            } else {
+                alert('Credenciales incorrectas. Intenta de nuevo.'); // Mensaje de error
+                return false; // Prevenir el envío del formulario
+            }
+        }
+    </script>    
+</body>
+
+</html>

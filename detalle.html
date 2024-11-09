@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón de amor con confeti</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    <div class="heart-container">
+        <div id="heart-words"></div>
+        <div class="center-text">Mi amor</div>
+    </div>
+    
+    <!-- Audio sin autoplay -->
+    <audio id="audio" loop>
+        <source src="corazon.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="confetti.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Detecta el clic en cualquier parte de la pantalla
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            // Verifica si el audio está pausado para iniciarlo solo una vez
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>
